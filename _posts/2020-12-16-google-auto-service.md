@@ -3,6 +3,7 @@ layout: post
 title: Google Auto Service 使用说明
 subtitle: 最佳实践
 comments: true
+tags: [tech]
 ---
 
 此文章旨在帮助第一次接触Google Auto Service的同学, 希望能够帮到大家.
