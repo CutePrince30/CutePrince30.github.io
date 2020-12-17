@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Google Auto Service 使用说明
-subtitle: 最佳实践
 comments: true
 tags: [tech]
 ---
