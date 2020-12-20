@@ -9,7 +9,7 @@ tags: [tech]
 
 ## Hadoop
 ### 安装包下载
-```
+```bash
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.4/hadoop-3.1.4.tar.gz
 ```
 ### 配置
@@ -31,7 +31,7 @@ SecondaryNameNode 数据存放目录: /home/dev/data/hadoop/secondary
 DataNode 数据存放目录: /home/dev/data/hadoop/data
 临时数据存放目录: /home/dev/data/hadoop/tmp
 ```
-```shell script
+```bash
 $ cd
 $ mkdir -p /home/dev/data/hadoop/name
 $ mkdir -p /usr/local/data/hadoop/secondary
