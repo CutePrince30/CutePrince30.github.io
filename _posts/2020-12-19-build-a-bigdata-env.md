@@ -10,28 +10,26 @@ tags: [tech]
 ## Hadoop
 ### 安装包下载
 ```bash
-wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.4/hadoop-3.1.4.tar.gz
+$ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.4/hadoop-3.1.4.tar.gz
 ```
 ### 配置
 #### ssh免密登录（单机也需要）
-```
-ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
-cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
-chmod 0600 ~/.ssh/authorized_keys
+```bash
+$ ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
+$ cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+$ chmod 0600 ~/.ssh/authorized_keys
 ```
 #### 安装JAVA
-```
+```bash
 # java安装包自行下载
 $ rpm -ivh jdk-8u271-linux-x64.rpm
 ```
 #### 创建数据存储目录
-```text
-NameNode 数据存放目录: /home/dev/data/hadoop/name
-SecondaryNameNode 数据存放目录: /home/dev/data/hadoop/secondary
-DataNode 数据存放目录: /home/dev/data/hadoop/data
-临时数据存放目录: /home/dev/data/hadoop/tmp
-```
 ```bash
+# NameNode 数据存放目录: /home/dev/data/hadoop/name
+# SecondaryNameNode 数据存放目录: /home/dev/data/hadoop/secondary
+# DataNode 数据存放目录: /home/dev/data/hadoop/data
+# 临时数据存放目录: /home/dev/data/hadoop/tmp
 $ cd
 $ mkdir -p /home/dev/data/hadoop/name
 $ mkdir -p /usr/local/data/hadoop/secondary
@@ -39,21 +37,20 @@ $ mkdir -p /home/dev/data/hadoop/data
 $ mkdir -p /home/dev/data/hadoop/tmp
 ```
 #### 配置环境变量
-```shell script
+```bash
 $ vim ~/.bash_profile
 
-export HADOOP_HOME=/home/dev/hadoop-3.1.4
-PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HADOOP_HOME/bin
+$ export HADOOP_HOME=/home/dev/hadoop-3.1.4
+$ PATH=$PATH:$HOME/.local/bin:$HOME/bin:$HADOOP_HOME/bin
 
-export PATH
+$ export PATH
 ```
 #### 配置文件
-```shell script
+```
 # hadoop-env.sh 最后一行添加
 export JAVA_HOME=/usr/java/jdk1.8.0_271-amd64
 
 # core-site.xml
-
 <configuration>
     <property>
         <name>fs.defaultFS</name>
@@ -107,7 +104,7 @@ export JAVA_HOME=/usr/java/jdk1.8.0_271-amd64
 </configuration>
 ```
 ### 启动
-```shell script
+```bash
 # 格式化
 $ hdfs namenode -format
 
@@ -118,7 +115,7 @@ $ start-all.sh
 $ hdfs dfsadmin -safemode leave
 ```
 ### 验证启动
-```shell script
+```bash
 $ jps
 18288 Jps
 6737 NameNode
@@ -132,12 +129,12 @@ $ jps
 
 ## Hive
 ### 安装包下载(hadoop3以上，最好使用hive3以上的版本)
-```shell script
-wget https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+```bash
+$ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 ```
 ### 配置
 #### 配置环境变量
-```shell script
+```bash
 $ vim ~/.bash_profile
 
 export HIVE_HOME=/home/dev/hive-3.1.2
@@ -151,7 +148,7 @@ export PATH
 2. 添加mysql-connector-java-5.1.47.jar
 ```
 #### 配置文件
-```shell script
+```
 $ cp hive-log4j2.properties.template hive-log4j2.properties
 $ cp hive-exec-log4j2.properties.template hive-exec-log4j2.properties
 $ cp beeline-log4j2.properties.template beeline-log4j2.properties
@@ -209,7 +206,7 @@ export HIVE_CONF_DIR=/home/dev/hive-3.1.2/conf
 </configuration>
 ```
 ### 启动
-```shell script
+```bash
 $ bin/schematool -initSchema -dbType mysql
 ```
 ### 说明
@@ -217,11 +214,11 @@ $ bin/schematool -initSchema -dbType mysql
 
 ## Spark
 ### 安装包下载
-```shell script
+```bash
 
 ```
 ### 配置
-```shell script
+```bash
 
 ```
 ### 启动
@@ -229,8 +226,8 @@ $ bin/schematool -initSchema -dbType mysql
 
 ## HBase
 ### 安装包下载
-```shell script
-wget https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/2.4.0/hbase-2.4.0-bin.tar.gz
+```bash
+$ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/2.4.0/hbase-2.4.0-bin.tar.gz
 ```
 ### 配置
 ### 启动
@@ -238,8 +235,8 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/2.4.0/hbase-2.4.0-bin.tar
 
 ## Flink
 ### 安装包下载
-```shell script
-wget https://mirrors.tuna.tsinghua.edu.cn/apache/flink/flink-1.12.0/flink-1.12.0-bin-scala_2.11.tgz
+```bash
+$ wget https://mirrors.tuna.tsinghua.edu.cn/apache/flink/flink-1.12.0/flink-1.12.0-bin-scala_2.11.tgz
 ```
 ### 配置
 ### 启动
