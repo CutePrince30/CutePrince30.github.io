@@ -9,18 +9,18 @@ tags: [tech]
 
 ## Hadoop
 ### 安装包下载
-```shell script
+```
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.1.4/hadoop-3.1.4.tar.gz
 ```
 ### 配置
 #### ssh免密登录（单机也需要）
-```shell script
+```
 ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
 ```
 #### 安装JAVA
-```shell script
+```
 # java安装包自行下载
 $ rpm -ivh jdk-8u271-linux-x64.rpm
 ```
