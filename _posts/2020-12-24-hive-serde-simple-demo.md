@@ -10,7 +10,7 @@ tags: [tech]
 ## SerDe是什么
 
 {: .box-note}
-**Note:** 为什么Hive能够支持多种的数据类型，答案就是SerDe:
-          1. Serialization and Deserialization
-          2. Hive Row Format
-          3. Map-reduce Input/Output Format
+为什么Hive能够支持多种的数据类型，答案就是SerDe:
+1. Serialization and Deserialization
+2. Hive Row Format
+3. Map-reduce Input/Output Format
