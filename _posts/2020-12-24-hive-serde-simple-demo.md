@@ -17,7 +17,7 @@ SerDe 允许 Hive 从表中读取数据，并将其以任何自定义格式写�
 
 ## Serialization and Deserialization
 ### Java
-```
+```text
 Java对象 --> byte[]
 序列化 — Process of converting an object in memory into bytes that can be stored in a file or transmitted over a network.
 
