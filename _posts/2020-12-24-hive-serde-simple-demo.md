@@ -19,23 +19,22 @@ SerDe 允许 Hive 从表中读取数据，并将其以任何自定义格式写�
 ## Serialization and Deserialization
 ### Java
 
-```text
+{: .box-note}
 Java对象 --> byte[]
+
 序列化 — Process of converting an object in memory into bytes that can be stored in a file or transmitted over a network.
 
+{: .box-note}
 byte[] --> Java对象
+
 反序列化 — Process of converting the bytes back into an object in memory.
-```
 
 ### hive
-
-```text
 hive的row --> hadoop的writable 
 序列化 — An insert statement creates serialized data(files) that can be stored into an external storage like HDFS
 
 hadoop的writable --> hive的row
 反序列化 — A select statement creates deserialized data(columns) that is understood by Hive.
-```
 
 ## 内置的SerDe
 * Avro
